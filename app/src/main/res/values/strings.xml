@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">AlcoolOuGasolina</string>
+    <string name="txt_alcool">Abasteça com Etanol</string>
+    <string name="txt_gasoline">Abasteça com Gasolina</string>
+</resources>
