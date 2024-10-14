@@ -1,5 +1,12 @@
 <resources>
-    <string name="app_name">AlcoolOuGasolina</string>
+    <string name="app_name">Alcool ou Gasolina</string>
     <string name="txt_alcool">Abasteça com Etanol</string>
     <string name="txt_gasoline">Abasteça com Gasolina</string>
+    <string name="btn_calc">Calcular</string>
+    <string name="txtAlcool">Etanol</string>
+    <string name="txtGasolina">Gasolina</string>
+    <string name="txt_result"></string>
+    <string name="field_etanol">3.50</string>
+    <string name="field_gasolina">4.80</string>
+
 </resources>
