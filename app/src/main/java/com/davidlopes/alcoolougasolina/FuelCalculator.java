@@ -1,8 +1,8 @@
 package com.davidlopes.alcoolougasolina;
 
 public class FuelCalculator {
-    private double gasolinePrice;
-    private double alcoholPrice;
+    private double gasolinePrice = 0.0;
+    private double alcoholPrice = 0.0;
     private double result;
 
     public FuelCalculator(double gasolinePrice, double alcoholPrice) {
@@ -11,6 +11,7 @@ public class FuelCalculator {
     }
 
     public double calculate() {
+        System.out.println("Gasolina: " + gasolinePrice + " alcool: " + alcoholPrice);
         result = alcoholPrice / gasolinePrice;
         return result;
     }

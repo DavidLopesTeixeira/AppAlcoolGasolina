@@ -41,15 +41,35 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
     }
 
     private void generateResult(){
-        double alcoholPrice = Double.parseDouble(editField_alcohol.getText().toString());
-        double gasolinePrice = Double.parseDouble(editField_gasoline.getText().toString());
+        String alcoholInput = editField_alcohol.getText().toString().trim();
+        String gasolineInput = editField_gasoline.getText().toString().trim();
+
+        if(alcoholInput.isEmpty() || gasolineInput.isEmpty()){
+            //System.out.println("Está Vazio");
+            txt_result.setVisibility(View.VISIBLE);
+            txt_result.setTextColor(ContextCompat.getColor(this, R.color.error));
+            txt_result.setText(getString(R.string.error_empty_fielding));
+            return;
+        }
+
+        double alcoholPrice;
+        double gasolinePrice;
+
+        try{
+            alcoholPrice = Double.parseDouble(alcoholInput);
+            gasolinePrice = Double.parseDouble(gasolineInput);
+        } catch (NumberFormatException e){
+            txt_result.setTextColor(ContextCompat.getColor(this, R.color.error));
+            txt_result.setText(getString(R.string.error_empty_fielding));
+            return;
+        }
         FuelCalculator fuelCalculator = new FuelCalculator(gasolinePrice, alcoholPrice);
         double result = fuelCalculator.calculate();
         txt_result.setVisibility(View.VISIBLE);
+
 
         if(result < 0.70) {
             txt_result.setTextColor(ContextCompat.getColor(this, R.color.alcool));

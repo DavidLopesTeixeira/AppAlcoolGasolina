@@ -8,5 +8,6 @@
     <string name="txt_result"></string>
     <string name="field_etanol">3.50</string>
     <string name="field_gasolina">4.80</string>
+    <string name="error_empty_fielding">Todos os campos devem ser preenchidos</string>
 
 </resources>
